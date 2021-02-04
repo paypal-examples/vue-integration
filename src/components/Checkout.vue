@@ -14,3 +14,9 @@ loadScript({'client-id': 'sb'})
     paypal.Buttons().render('#paypal-button-container')
   });
 </script>
+
+<style>
+  #paypal-button-container {
+    margin: 30px 0;
+  }
+</style>

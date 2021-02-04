@@ -1,16 +1,23 @@
+<script>
+export default {
+  name: 'Checkout'
+}
+
+</script>
+
 <template>
-  <div class="item">
-    <h1>Buy a desk plant!</h1>
-    <img src="https://source.unsplash.com/DoxGtpAsdYY/640x426" alt="desk plant">
-  </div>
+<div class="item">
+  <img class="item" src="https://source.unsplash.com/xTLXtIg2No0/350x500" alt="Swiss Cheese plant" />
+  <span class="caption">Photo by <a href="https://unsplash.com/@mensroom?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mike Marquez</a> on <a href="https://unsplash.com/s/photos/cheese-plant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+</div>
 </template>
 
 <style scoped>
-  .item {
-    margin-bottom: 2em;
-  }
-
   img {
-    border: 1px solid darkgray;
-  }
+  border: 1px solid darkgray;
+}
+
+.caption {
+  font-size: 11px;
+}
 </style>

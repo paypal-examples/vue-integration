@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Buy a plant!</h1>
     <Item />
     <Checkout />
   </div>
@@ -21,15 +22,20 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 350px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  background: #ffffff;
   text-align: center;
-  color: #2c3e50;
   display: flex;
-  margin: 82px auto 32px;
-  padding: 0 16px;
-  max-width: 960px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 62px;
+  font-weight: bold;
 }
 </style>
