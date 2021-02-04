@@ -9,7 +9,9 @@ export default {
   name: 'Checkout'
 }
 
-loadScript({'client-id': 'sb'})
+const CLIENT_ID = 'sb';
+
+loadScript({'client-id': CLIENT_ID})
   .then(paypal => {
     paypal.Buttons().render('#paypal-button-container')
   });
