@@ -3,18 +3,20 @@
 </template>
 
 <script>
-import { loadScript } from '@paypal/paypal-js';
 
 export default {
-  name: 'Checkout'
+  name: 'Checkout',
+  beforeCreate: function() {
+    this.$loadScript({'client-id': CLIENT_ID})
+      .then(paypal => {
+        paypal.Buttons().render('#paypal-button-container')
+      });
+  }
 }
 
-const CLIENT_ID = 'sb';
+const CLIENT_ID = 'test';
 
-loadScript({'client-id': CLIENT_ID})
-  .then(paypal => {
-    paypal.Buttons().render('#paypal-button-container')
-  });
+
 </script>
 
 <style>

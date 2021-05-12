@@ -10,6 +10,7 @@
 import Checkout from './components/Checkout.vue';
 import Item from './components/Item.vue';
 
+
 export default {
   name: 'App',
   components: {
