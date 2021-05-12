@@ -1,20 +1,18 @@
 <template>
-  <div id="paypal-button-container"></div>
+<div>
+  <paypal-buttons></paypal-buttons>
+  </div>
 </template>
 
 <script>
-import { loadScript } from '@paypal/paypal-js';
-
+import Vue from 'vue';
+const PayPalButton = window.paypal.Buttons.driver("vue", Vue);
 export default {
-  name: 'Checkout'
+  name: 'Checkout',
+  components: {
+    "paypal-buttons": PayPalButton
+  }
 }
-
-const CLIENT_ID = 'sb';
-
-loadScript({'client-id': CLIENT_ID})
-  .then(paypal => {
-    paypal.Buttons().render('#paypal-button-container')
-  });
 </script>
 
 <style>
