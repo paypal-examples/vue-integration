@@ -23,7 +23,7 @@ Navigate to [localhost:8080](http://localhost:8080). You should see the app runn
 
 ## How It Works
 
-The JavaScript SDK is imported via [paypal-js](https://github.com/paypal/paypal-js) in _src/components/Checkout.vue_ where we set up a div to hold the buttons. Style, payment method, and other options can be specified in `paypal.Buttons()`
+The JavaScript SDK is included in _public/index.html_. The Vue button driver is registered in _src/components/Checkout.vue_. Style, payment method, and other options can be specified on the `<paypal-buttons>` tag in the Checkout component.
 
 ## Further help
 
