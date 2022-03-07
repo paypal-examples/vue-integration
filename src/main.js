@@ -1,10 +1,4 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import { loadScript } from '@paypal/paypal-js'
 
-Vue.config.productionTip = false
-Vue.prototype.$loadScript = loadScript
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+createApp(App).mount('#app')

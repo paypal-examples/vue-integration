@@ -1,19 +1,27 @@
 <template>
-  <div id="paypal-button-container"></div>
+  <div v-if="!paid" id="paypal-button-container"></div>
+  <div v-else id="confirmation">Order complete!</div>
 </template>
 
 <script>
+import { loadScript } from '@paypal/paypal-js';
+
 export default {
-  name: "Checkout",
-  beforeCreate: function () {
-    this.$loadScript({ "client-id": CLIENT_ID }).then((paypal) => {
+  name: 'Checkout-Payment',
+  beforeCreate: function() {
+    loadScript({ 'client-id': CLIENT_ID }).then((paypal) => {
       paypal
         .Buttons({
           createOrder: this.createOrder,
           onApprove: this.onApprove,
         })
-        .render("#paypal-button-container");
+        .render('#paypal-button-container');
     });
+  },
+  data() {
+    return {
+      paid: false,
+    };
   },
   props: {
     cartTotal: {
@@ -22,8 +30,8 @@ export default {
     },
   },
   methods: {
-    createOrder: function (data, actions) {
-      console.log("Creating order...");
+    createOrder: function(data, actions) {
+      console.log('Creating order...');
       return actions.order.create({
         purchase_units: [
           {
@@ -34,18 +42,26 @@ export default {
         ],
       });
     },
-    onApprove: function (data, actions) {
-      console.log("Order approved...");
-      return actions.order.capture().then(console.log("Order complete!"));
+    onApprove: function(data, actions) {
+      console.log('Order approved...');
+      return actions.order.capture().then(() => {
+        this.paid = true;
+        console.log('Order complete!');
+      });
     },
   },
 };
-
-const CLIENT_ID = "test";
+const CLIENT_ID = 'test';
 </script>
 
 <style>
 #paypal-button-container {
   margin: 30px 0;
+}
+
+#confirmation {
+  color: green;
+  margin-top: 1em;
+  font-size: 2em;
 }
 </style>
