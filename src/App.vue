@@ -1,23 +1,21 @@
 <template>
   <div id="app">
     <h1>Buy a plant!</h1>
-    <Item />
-    <Checkout />
+    <Checkout-Item />
+    <Checkout-Payment />
   </div>
 </template>
 
 <script>
-import Checkout from './components/Checkout.vue';
-import Item from './components/Item.vue';
-
-
+import CheckoutPayment from './components/Checkout.vue';
+import CheckoutItem from './components/Item.vue';
 export default {
   name: 'App',
   components: {
-    Checkout,
-    Item
-  }
-}
+    CheckoutPayment,
+    CheckoutItem,
+  },
+};
 </script>
 
 <style>
@@ -34,7 +32,6 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
 h1 {
   font-size: 62px;
   font-weight: bold;
