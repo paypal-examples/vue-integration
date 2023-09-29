@@ -1,12 +1,14 @@
 <script setup>
-import CheckoutPayment from './components/CheckoutPayment.vue'
-import CheckoutItem from './components/CheckoutItem.vue'
+import CheckoutPayment from './components/Checkout.vue';
+import CheckoutItem from './components/Item.vue';
 </script>
 
 <template>
+  <div id="app">
     <h1>Buy a plant!</h1>
     <CheckoutItem />
     <CheckoutPayment />
+  </div>
 </template>
 
 <style>
