@@ -28,7 +28,9 @@
       "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
-    "rules": {}
+    "rules": {
+      "semi": [2, "never"]
+    }
   },
   "browserslist": [
     "> 1%",
