@@ -1,22 +1,13 @@
-<template>
-  <div id="app">
-    <h1>Buy a plant!</h1>
-    <Checkout-Item />
-    <Checkout-Payment />
-  </div>
-</template>
-
-<script>
-import CheckoutPayment from './components/Checkout.vue';
-import CheckoutItem from './components/Item.vue';
-export default {
-  name: 'App',
-  components: {
-    CheckoutPayment,
-    CheckoutItem,
-  },
-};
+<script setup>
+import CheckoutPayment from './components/CheckoutPayment.vue'
+import CheckoutItem from './components/CheckoutItem.vue'
 </script>
+
+<template>
+    <h1>Buy a plant!</h1>
+    <CheckoutItem />
+    <CheckoutPayment />
+</template>
 
 <style>
 #app {

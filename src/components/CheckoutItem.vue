@@ -1,9 +1,3 @@
-<script>
-export default {
-  name: 'Checkout-Item',
-};
-</script>
-
 <template>
   <div class="item">
     <img
