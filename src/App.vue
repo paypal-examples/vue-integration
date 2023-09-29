@@ -1,6 +1,6 @@
 <script setup>
 import CheckoutPayment from './components/CheckoutPayment.vue';
-import CheckoutItem from './components/Item.vue';
+import CheckoutItem from './components/CheckoutItem.vue';
 </script>
 
 <template>
