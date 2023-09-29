@@ -1,16 +1,13 @@
 <script setup>
-import { loadScript } from '@paypal/paypal-js'
+import { loadScript } from '@paypal/paypal-js';
 import { onBeforeMount, ref } from 'vue'
-
-// Change to your CLIENT ID gotten from the developer dashboard
-const CLIENT_ID = 'test'
-
 const { cartTotal } = defineProps({
   cartTotal: {
     type: Number,
     default: 0.01,
   }
 })
+const CLIENT_ID = 'test';
 const paid  = ref(false)
 
 onBeforeMount(function() {
@@ -20,12 +17,12 @@ onBeforeMount(function() {
           createOrder: createOrder,
           onApprove: onApprove,
         })
-        .render('#paypal-button-container')
-    })
+        .render('#paypal-button-container');
+    });
   })
 
    function createOrder(data, actions) {
-      console.log('Creating order...')
+      console.log('Creating order...');
       return actions.order.create({
         purchase_units: [
           {
@@ -34,15 +31,15 @@ onBeforeMount(function() {
             },
           },
         ],
-      })
+      });
     }
 
 function onApprove(data, actions) {
-  console.log('Order approved...')
+  console.log('Order approved...');
   return actions.order.capture().then(() => {
-    this.paid = true
-    console.log('Order complete!')
-  })
+    this.paid = true;
+    console.log('Order complete!');
+  });
 }
 </script>
 
@@ -53,7 +50,6 @@ function onApprove(data, actions) {
 
 <style>
 #paypal-button-container {
-  width: 100%;
   margin: 30px 0;
 }
 

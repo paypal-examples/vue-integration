@@ -1,5 +1,5 @@
 <script setup>
-import CheckoutPayment from './components/Checkout.vue';
+import CheckoutPayment from './components/CheckoutPayment.vue';
 import CheckoutItem from './components/Item.vue';
 </script>
 
