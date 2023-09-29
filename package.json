@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
-    "@paypal/paypal-js": "^7.0.3",
+    "@paypal/paypal-js": "^5.0.2",
     "vue": "^3.2.13"
   },
   "devDependencies": {
@@ -29,10 +29,7 @@
       "eslint:recommended"
     ],
     "rules": {
-      "semi": [
-        2,
-        "never"
-      ]
+      "semi": [2, "never"]
     }
   },
   "browserslist": [
