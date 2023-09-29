@@ -9,17 +9,17 @@ cd vue-integration
 npm install
 ```
 
-...log in to the [developer dashboard](https://www.paypal.com/signin?returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplications) and get your client ID from your default application. Change `const CLIENT_ID = 'your-client-id';` in _src/components/Checkout.vue_ so CLIENT_ID matches your sandbox client ID...
+...log in to the [developer dashboard](https://www.paypal.com/signin?returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplications) and get your client ID from your default application. Change `const CLIENT_ID = 'your-client-id';` in _src/components/CheckoutPayment.vue_ so CLIENT_ID matches your sandbox client ID...
 
 > If you need help setting up your developer dashboard or finding your client ID, follow the first step in the getting started documentation to [get API credentials](https://developer.paypal.com/docs/business/get-started/#get-api-credentials)
 
 ...then start:
 
 ```bash
-npm run serve
+npm run dev
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see the app running.
+Navigate to [localhost:5173](http://localhost:5173). You should see the app running.
 
 ## How It Works
 
