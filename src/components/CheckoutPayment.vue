@@ -40,7 +40,7 @@ onBeforeMount(function() {
 function onApprove(data, actions) {
   console.log('Order approved...')
   return actions.order.capture().then(() => {
-    this.paid = true
+    paid.value = true
     console.log('Order complete!')
   })
 }
